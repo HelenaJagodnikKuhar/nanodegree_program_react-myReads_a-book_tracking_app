@@ -13,6 +13,7 @@ class BooksApp extends React.Component {
     query: '',
     searchResults: []
   }
+  
   setBookShelfs(books) {
     return books.map((book) => {
       this.state.books.forEach((mybook) => {
@@ -77,7 +78,7 @@ class BooksApp extends React.Component {
       books: this.state.books
     })
 
-    console.log("onShelfChange:book", changeBook, shelf)
+   // console.log("onShelfChange:book", changeBook, shelf)
 
     BooksAPI.update(changeBook, shelf)
       .catch(err => {
